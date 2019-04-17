@@ -179,15 +179,6 @@ void draw() {
 
         }
       }
-      
-    // Health UI
-    for(int i=1;i<=playerHealth;i++){
-      lifeX = i*70 - 60;
-      image(life, lifeX, lifeY);
-    }
-    if(playerHealth<=0){
-            gameState = GAME_OVER;
-    }
     
     //soldier
      image(soldier,soldierX, soldierY*80+cameraMove); 
@@ -203,6 +194,15 @@ void draw() {
         cabbageX=-80;//disappear
         if(playerHealth < 5) playerHealth ++;
          }  
+    
+    // Health UI
+    for(int i=1;i<=playerHealth;i++){
+      lifeX = i*70 - 60;
+      image(life, lifeX, lifeY);
+    }
+    if(playerHealth<=0){
+            gameState = GAME_OVER;
+    }
     
     //groundhog
     image(groundHog,groundHogX,groundHogY);
